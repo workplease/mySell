@@ -43,7 +43,6 @@ class ProductServiceImplTest {
 
     @Test
     public void findAll() throws Exception {
-        Sort sort = Sort.by(Sort.Direction.DESC);
         PageRequest request = PageRequest.of(0, 2);
         Page<ProductInfo> productInfoPage = productService.findAll(request);
         Assert.assertNotEquals(0, productInfoPage.getTotalElements());
